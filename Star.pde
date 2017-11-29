@@ -1,32 +1,16 @@
-class Spaceship extends Floater  
-{  
-  public Spaceship(){
-    corners = 4;  
-  int[] xS = {-8, 16 , -8, -2};
-  int[] yS = {-8,0,8,0}; 
-  xCorners = xS;
-  yCorners = yS; 
-  myColor = 240;
-   myCenterX = 50;
-  myCenterY = 50;
-   myDirectionX = 0;
-  myDirectionY = 0;   
-  myPointDirection = 360;
-  }
-  
-  public void setX(int x) {myCenterX = x;}
-  public void setY(int y) {myCenterY = y;}
-  public int getX() { return (int)myCenterX;}
-  public int getY(){ return (int)myCenterY; }
-  
-   public void setDirectionX(double x){myDirectionX = x;}
-  
-   public double getDirectionX(){ return myDirectionX;}  
-  
-   public void setDirectionY(double y){ myDirectionY = y;} 
-  
-   public double getDirectionY(){return myDirectionY;} 
-  
-  public void setPointDirection(int degrees){myPointDirection = degrees;}   
-  public double getPointDirection() {return myPointDirection;}
+class Star //note that this class does NOT extend Floater
+{
+ 
+ private int myX, myY;
+ public Star()
+ {
+   myX = (int)(Math.random()* 1000)-500;
+   myY = (int)(Math.random()* 1000)-500;
+ }
+   public void show()
+   {
+   fill(255);
+   ellipse( myX, myY,3,3);
+   }
+ 
 }
