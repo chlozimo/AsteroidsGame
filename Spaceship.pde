@@ -1,4 +1,4 @@
-class Spaceship extends Floater  
+ class Spaceship extends Floater  
 {  
   public Spaceship(){
     corners = 4;  
@@ -7,8 +7,8 @@ class Spaceship extends Floater
   xCorners = xS;
   yCorners = yS; 
   myColor = 240;
-   myCenterX = 250;
-  myCenterY = 250;
+   myCenterX = 50;
+  myCenterY = 50;
    myDirectionX = 0;
   myDirectionY = 0;   
   myPointDirection = 360;
