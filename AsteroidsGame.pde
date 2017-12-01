@@ -1,11 +1,11 @@
 Spaceship Gerald;
-Asteroidz[] Bobby = new Asteroidz[20];
-Star[] Lights = new Star[700]; 
+Asteroid[] AsteriodsArray = new Asteroid[5];
+Star[] StarsArray = new Star[1000]; 
 public void setup() 
 {
   Gerald = new Spaceship();
-  for (int i=0; i<Lights.length; i++){ Lights[i] = new Star(); }
-  for (int jk = 0; jk<Bobby.length; jk++){ Bobby[jk] = new Asteroidz(); }
+  for (int i=0; i<StarsArray.length; i++){ StarsArray[i] = new Star(); }
+  for (int jk = 0; jk<AsteriodsArray.length; jk++){ AsteriodsArray[jk] = new Asteroid(); }
  
 }
 public void draw()
@@ -13,8 +13,16 @@ public void draw()
   background(0, 0, 0);
   Gerald.show();
   Gerald.move();
-  for (int j = 0; j< Lights.length; j++){ Lights[j].show(); }
-  for (int l =0; l< Bobby.length; l++){Bobby[l].show(); Bobby[l].move();}
+  
+  for (int j = 0; j< StarsArray.length; j++){ 
+    StarsArray[j].show(); 
+   }
+  for (int l = 0; l< AsteriodsArray.length; l++){
+    AsteriodsArray[l].show(); 
+    AsteriodsArray[l].move();
+    AsteriodsArray[l].setDirectionX( (double) (Math.random()*10)-5);
+    AsteriodsArray[l].setDirectionY( (double) (Math.random()* 10) -5);
+  }
 }
 public void keyPressed() 
 {
