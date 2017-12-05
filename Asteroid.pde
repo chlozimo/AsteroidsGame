@@ -1,7 +1,7 @@
-class Asteroidz extends Floater
+class Asteroid extends Floater
 {
   private int aRotspeed;
-  public Asteroidz() 
+  public Asteroid() 
   {
     corners = 8; 
     int[] xS = {-10, -5, 0 , 5, 5, 0, -5, -10};
