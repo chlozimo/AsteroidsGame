@@ -11,6 +11,13 @@ public void setup()
 }
 public void draw()
 {
+ // ArrayList <Asteroids> 
+  for(int oP =0; oP < AsteriodsArray; oP++)
+  {
+    int d = dist(Gerald.get(oP), Gerald.get(oP), AsteriodsArray.get(oP), AsteroidsArray.get(oP));
+    if ( d < 10)
+    AsteriodsArray.remove(oP);
+  }
   background(0, 0, 0);
   Gerald.show();
   Gerald.move();
