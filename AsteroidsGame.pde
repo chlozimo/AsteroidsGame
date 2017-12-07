@@ -1,5 +1,5 @@
 Spaceship Gerald;
-Asteroid[] AsteriodsArray = new Asteroid[500];
+Asteroid[] AsteriodsArray = new Asteroid[200];
 Star[] StarsArray = new Star[1000]; 
 public void setup() 
 {
