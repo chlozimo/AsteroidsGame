@@ -7,10 +7,7 @@ size(500,500);
   Gerald = new Spaceship();
   for (int i=0; i<StarsArray.length; i++){ StarsArray[i] = new Star(); }
   for (int jk = 0; jk < 3; jk++){ AsteroidList.add(new Asteroid()); }
- 
 }
-
-
 
 public void draw()
 {
@@ -19,11 +16,7 @@ public void draw()
   Gerald.move();
   drawStars();
   drawAsteroids();
-  //float d = dist(width/2, height/2, mouseX, mouseY);
-  //float maxDist = dist(0,0, width/2, height/2);
-  //float gray = map(d, 0, maxDist,0, 255);
-  
-
+ 
 }
 
 public void drawStars(){
@@ -33,30 +26,16 @@ public void drawStars(){
  }
 public void drawAsteroids(){
  for (int l = 0; l< AsteroidList.size(); l++){
-    System.out.println( AsteroidList.get(0));
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
-    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
-    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 5) - 3);
+    AsteroidList.get(l).setDirectionX( (double) (Math.random()  ) - 3);
+    AsteroidList.get(l).setDirectionY( (double) (Math.random()  ) - 3);
     
     float d = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
     if( d < 7){
       AsteroidList.remove(l);
     }
   }
-}
-public void moveAsteroid(Asteroid asteroid1 ){
-  //  asteroid1.move();
-  //  asteroid1.setDirectionX( (double) (Math.random()) - 3);
-  //  asteroid1.setDirectionY( (double) (Math.random()) - 3);
-    
-  //  float asteriodX = dist(Gerald.getX(),Gerald.getY(),asteroid1.getX(), asteroid1.getY());
-  //if( asteriodX < 10){
-  //   asteroid1.remove();
-  //}
-
-    
-    
 }
 public void keyPressed() 
 {
