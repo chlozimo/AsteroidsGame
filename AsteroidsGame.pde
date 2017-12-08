@@ -3,6 +3,7 @@ ArrayList <Asteroid> AsteroidList  = new ArrayList <Asteroid>();
 Star[] StarsArray = new Star[1000]; 
 public void setup() 
 {
+size(500,500);
   Gerald = new Spaceship();
   for (int i=0; i<StarsArray.length; i++){ StarsArray[i] = new Star(); }
   for (int jk = 0; jk < 3; jk++){ AsteroidList.add(new Asteroid()); }
@@ -38,8 +39,8 @@ public void drawAsteroids(){
     AsteroidList.get(l).setDirectionX( (double) (Math.random() * 10) - 3);
     AsteroidList.get(l).setDirectionY( (double) (Math.random() * 10) - 3);
     
-    float asteriodX = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
-    if( asteriodX < 7){
+    float d = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
+    if( d < 7){
       AsteroidList.remove(l);
     }
   }
