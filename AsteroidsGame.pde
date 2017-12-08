@@ -36,8 +36,8 @@ public void drawAsteroids(){
     System.out.println( AsteroidList.get(0));
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
-    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 10) - 3);
-    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 10) - 3);
+    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
+    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 5) - 3);
     
     float d = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
     if( d < 7){
