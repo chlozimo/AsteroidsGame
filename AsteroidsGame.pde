@@ -3,15 +3,11 @@ ArrayList <Asteroid> AsteroidList  = new ArrayList <Asteroid>();
 Star[] StarsArray = new Star[1000]; 
 public void setup() 
 {
-size(500,500);
   Gerald = new Spaceship();
   for (int i=0; i<StarsArray.length; i++){ StarsArray[i] = new Star(); }
   for (int jk = 0; jk < 3; jk++){ AsteroidList.add(new Asteroid()); }
  
 }
-
-
-
 public void draw()
 {
   background(0, 0, 0);
@@ -19,11 +15,6 @@ public void draw()
   Gerald.move();
   drawStars();
   drawAsteroids();
-  //float d = dist(width/2, height/2, mouseX, mouseY);
-  //float maxDist = dist(0,0, width/2, height/2);
-  //float gray = map(d, 0, maxDist,0, 255);
-  
-
 }
 
 public void drawStars(){
