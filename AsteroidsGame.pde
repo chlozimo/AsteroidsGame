@@ -27,26 +27,16 @@ public void drawAsteroids(){
     System.out.println( AsteroidList.get(0));
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
-    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 10) - 3);
-    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 10) - 3);
+    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 2) - 1);
+    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 2) - 1);
     
     float asteriodX = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
-    if( asteriodX < 7){
+    if( asteriodX < 30){
       AsteroidList.remove(l);
     }
   }
 }
-public void moveAsteroid(Asteroid asteroid1 ){
-  //  asteroid1.move();
-  //  asteroid1.setDirectionX( (double) (Math.random()) - 3);
-  //  asteroid1.setDirectionY( (double) (Math.random()) - 3);
-    
-  //  float asteriodX = dist(Gerald.getX(),Gerald.getY(),asteroid1.getX(), asteroid1.getY());
-  //if( asteriodX < 10){
-  //   asteroid1.remove();
-  //}
 
-    
     
 }
 public void keyPressed() 
@@ -58,7 +48,7 @@ public void keyPressed()
   if ( key == ' ') { Gerald.accelerate(0.3 ); }
   if (key == 'p') 
   {
-    Gerald.setPointDirection((int)(Math.random()*360)-200);
+    Gerald.setPointDirection((int)(Math.random()*360));
     Gerald.setX((int)(Math.random()*360));
     Gerald.setY((int)(Math.random()*360));
     Gerald.setDirectionX(0);
