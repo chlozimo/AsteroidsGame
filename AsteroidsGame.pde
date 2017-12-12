@@ -27,18 +27,16 @@ public void drawAsteroids(){
     System.out.println( AsteroidList.get(0));
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
-    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 2) - 1);
-    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 2) - 1);
+    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
+    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 5) - 3);
     
     float asteriodX = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
-    if( asteriodX < 30){
+    if( asteriodX < 7){
       AsteroidList.remove(l);
     }
   }
 }
 
-    
-}
 public void keyPressed() 
 {
   if (key == 'w'){ Gerald.setPointDirection(270); }
