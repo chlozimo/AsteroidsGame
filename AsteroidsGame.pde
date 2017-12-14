@@ -6,7 +6,7 @@ public void setup()
   size(500,500);
   Gerald = new Spaceship();
   for (int i=0; i<StarsArray.length; i++){ StarsArray[i] = new Star(); }
-  for (int jk = 0; jk < 3; jk++){ AsteroidList.add(new Asteroid()); }
+  for (int jk = 0; jk < 50; jk++){ AsteroidList.add(new Asteroid()); }
  
 }
 public void draw()
@@ -28,8 +28,8 @@ public void drawAsteroids(){
     System.out.println( AsteroidList.get(0));
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
-    AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
-    AsteroidList.get(l).setDirectionY( (double) (Math.random() * 5) - 3);
+   // AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
+    //AsteroidList.get(l).setDirectionY( (double) (Math.random() * 5) - 3);
     
     float asteriodX = dist(Gerald.getX(),Gerald.getY(),AsteroidList.get(l).getX(), AsteroidList.get(l).getY());
     if( asteriodX < 7){

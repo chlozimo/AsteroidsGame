@@ -9,12 +9,12 @@ class Asteroid extends Floater
     xCorners = xS;
     yCorners = yS;
     myColor = 175;
-    myCenterX = 25;
-    myCenterY = 25;
-    myDirectionX = 1;
-    myDirectionY = 1;   
+    myCenterX = 250;
+    myCenterY = 250;
+    myDirectionX = (Math.random()*5)-2;
+    myDirectionY = (Math.random()*5)-2;   
     myPointDirection = 360;
-    aRotspeed = (int)(Math.random()*10)-5;
+    aRotspeed =(int)(Math.random()*10)-5;;
   }
   public void setX(int x){ myCenterX = x; }
   public void setY(int y){ myCenterY = y; }
