@@ -25,7 +25,7 @@ public void drawStars(){
  }
 public void drawAsteroids(){
  for (int l = 0; l< AsteroidList.size(); l++){
-    System.out.println( AsteroidList.get(0));
+   
     AsteroidList.get(l).show();
     AsteroidList.get(l).move();
    // AsteroidList.get(l).setDirectionX( (double) (Math.random() * 5) - 3);
